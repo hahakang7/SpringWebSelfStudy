@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 정보 수정</title>
+</head>
+<body>
+<h1>개인 정보 수정</h1>
+<form action="/update" method="post">
+    <div>
+        <label for="name">이름:</label>
+        <input type="text" id="name" name="name" th:value="${member.name}" placeholder="이름">
+    </div>
+    <div>
+        <label for="age">나이:</label>
+        <input type="text" id="age" name="age" th:value="${member.age}" placeholder="나이">
+    </div>
+    <div>
+        <label for="address">주소:</label>
+        <input type="text" id="address" name="address" th:value="${member.address}" placeholder="주소">
+    </div>
+    <div>
+        <label for="blType">혈액형:</label>
+        <input type="text" id="blType" name="blType" th:value="${member.blType}" placeholder="혈액형">
+    </div>
+    <button type="submit">수정</button>
+</form>
+</body>
+</html>

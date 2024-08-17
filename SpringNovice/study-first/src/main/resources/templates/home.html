@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 정보</title>
+</head>
+<body>
+<h1>개인 정보</h1>
+<ul>
+    <li><strong>회원번호:</strong> <span th:text="${member.sequence}"></span></li>
+    <li><strong>이름:</strong> <span th:text="${member.name}"></span></li>
+    <li><strong>나이:</strong> <span th:text="${member.age}"></span></li>
+    <li><strong>주소:</strong> <span th:text="${member.address}"></span></li>
+    <li><strong>혈액형:</strong> <span th:text="${member.blType}"></span></li>
+</ul>
+    <button onclick="goToLogInPage()">로그아웃</button>
+    <button onclick="goToModifyPage()">수정</button>
+
+    <script>
+        function goToModifyPage(){
+            window.location.href = "/modify";
+        }
+        function goToLogInPage(){
+            window.location.href = "/";
+        }
+    </script>
+</body>
+</html>

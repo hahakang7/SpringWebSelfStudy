@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>회원가입</title>
+</head>
+<body>
+<form action="member/logIn" method="post">
+    <label for="id">ID</label>
+    <input type="text" id="id" name="id">
+    <label for="password">password</label>
+    <input type="text" id="password" name="password">
+    <p>
+        <button type="submit">로그인</button>
+    </p>
+</form>
+<button onclick="goToSignInPage()">회원가입</button>
+<script>
+    function goToSignInPage(){
+        window.location.href = "/signIn";
+    }
+</script>
+</body>
+</html>
